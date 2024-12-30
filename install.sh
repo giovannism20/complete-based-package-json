@@ -6,7 +6,8 @@ AUTOCOMPLETE_SCRIPT="$INSTALL_DIR/autocomplete.sh"
 
 if [ ! -d "$INSTALL_DIR" ]; then
     echo "Cloning the repository..."
-    sudo git clone "$REPO_URL" "$INSTALL_DIR"
+    git clone "$REPO_URL" ~/complete-based-package-json
+    sudo cp -r ~/complete-based-package-json /opt/
 else
     echo "Repository already exists at $INSTALL_DIR."
 fi
